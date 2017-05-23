@@ -1,6 +1,6 @@
 {
   "name": "node-errorcatcher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Handle uncaught errors in NodeJS, and stylize error outputs.",
   "main": "lib/index.js",
   "typings": "lib/index",
