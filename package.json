@@ -1,7 +1,7 @@
 {
-  "name": "node-typescript-module-boilerplate",
+  "name": "node-errorcatcher",
   "version": "0.0.1",
-  "description": "/***** TODO Stuff and things ******/",
+  "description": "Handle uncaught errors in NodeJS, and stylize error outputs.",
   "main": "lib/index.js",
   "typings": "lib/index",
   "files": [
@@ -19,21 +19,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andfaulkner/node-typescript-module-boilerplate.git"
+    "url": "git+https://github.com/andfaulkner/node-errorcatcher.git"
   },
   "keywords": [
-    "/**** TODO ADD KEYWORDS ****/"
+    "node", "errors", "error", "error-handling", "error-handler", "prettified-output", "output-cleaner", "terminal", "console", "logging"
   ],
   "author": "Andrew Faulkner <andfaulkner@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andfaulkner/node-typescript-module-boilerplate/issues"
+    "url": "https://github.com/andfaulkner/node-errorcatcher/issues"
   },
-  "homepage": "https://github.com/andfaulkner/node-typescript-module-boilerplate#readme",
+  "homepage": "https://github.com/andfaulkner/node-errorcatcher#readme",
   "dependencies": {
     "app-root-path": "^2.0.1",
     "clarify": "^2.0.0",
-    "detect-node": "^2.0.3",
     "mad-utils": "^0.3.3",
     "moment": "^2.18.1",
     "pretty-error": "^2.1.0"
