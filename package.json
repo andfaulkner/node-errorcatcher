@@ -32,7 +32,9 @@
   "homepage": "https://github.com/andfaulkner/node-typescript-module-boilerplate#readme",
   "dependencies": {
     "app-root-path": "^2.0.1",
+    "clarify": "^2.0.0",
     "detect-node": "^2.0.3",
+    "mad-utils": "^0.3.3",
     "moment": "^2.18.1",
     "pretty-error": "^2.1.0"
   },
@@ -49,6 +51,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-promise": "^3.4.0",
     "fs-extra": "^2.0.0",
+    "kidnap-console": "^0.0.2",
     "lodash": "4.17.4",
     "mad-logs": "^8.2.4",
     "mocha": "^3.2.0",

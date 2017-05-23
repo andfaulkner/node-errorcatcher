@@ -1,35 +1,19 @@
-# module boilerplate
+# errorcatcher
 
-*   baseline for new standalone npm module projects
+Top-level error handling for NodeJS
+===================================
+*   Automatically catches missed errors.
+*   "Prettifies" all error outputs.
+*   Used via a simple 'include' and run (operates via side effects):
 
-----
-## Usage
+    import { GlobalNodeErrorHandlersSetup } from 'errorcatcher';
+    GlobalNodeErrorHandlersSetup();
+    // All errors thrown in the app will now display as clean "PrettyErrors"
 
-    // example of code used in the README file
-    console.log('some __module_boilerplate_usage__ example');
+prettyErrorFactory
+------------------
+*   prettyErrorFactory allows creation of your own PrettyError objects whenever needed.
 
-----
-### Third-level heading
-A regular paragraph, no bullet. Code below:
+    import { prettyErrorFactory } from 'errorcatcher';
 
-    // Another code example
-
-## API
-
-### someFunctionInModuleBoilerplate
-(varName: typeEg_string): returnTypeEg_number
-
-*   varName: description
-
-Examples:
-
-    someFunctionInModuleBoilerplate('hello');
-    // => hello output
-
-
-### anotherModuleBoilerplateFunction
-(anotherVarName: string) => next
-
-*   anotherVarName: description of argument
-*   next: (err: Error, filename: string): string
-    *   example of how a callback would be described
+*   (It probably won't be required)

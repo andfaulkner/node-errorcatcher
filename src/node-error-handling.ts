@@ -22,15 +22,6 @@ global[globalErrorHandlerSym] = {};
 // Timestamp format for logging
 const logTimestampFull = `YYYY/MM/DD : hh:mm:ss`;
 
-
-/**************************************** TYPE DEFINITIONS ****************************************/
-export interface GlobalNodeErrorHandlersSetupType {
-    (): PrettyError;
-    uncaughtExceptionHandlerSetup: (quitOnError?: boolean) => PrettyError;
-    catchUnhandledRejectionErrorsSetup: (pe: PrettyError) => PrettyError;
-}
-
-
 /******************************************** HELPERS *********************************************/
 /**
  * Get the current date, formatted for display in the stream of Express logs to the CLI.
@@ -154,11 +145,24 @@ function catchUnhandledRejectionErrorsSetup(pe: PrettyError): PrettyError {
     return pe;
 }
 
-//
-// Merge exports into a useful namespace. Just running the top-level item sets all handlers
-// up in Node, but more granularity is available by accessing the individual handler types on
-// the function object (top-level item), rather than running it.
-//
+
+/********************************************* EXPORT *********************************************/
+// Export namespace (see below for details)
+export interface GlobalNodeErrorHandlersSetupType {
+    (): PrettyError;
+    uncaughtExceptionHandlerSetup: (quitOnError?: boolean) => PrettyError;
+    catchUnhandledRejectionErrorsSetup: (pe: PrettyError) => PrettyError;
+}
+
+/**
+ *  Merge exports into a useful namespace. Just running the top-level item sets all handlers
+ *  up in Node, but more granularity is available by accessing the individual handler types on
+ *  the function object (top-level item), rather than running it.
+ *
+ *  @return {Object/Function} Runnable function object that automatically sets up pretty error
+ *                            handling across an entire Node application when run. Returns a
+ *                            PrettyError factory that displays given string as styled error text.
+ */
 export const GlobalNodeErrorHandlersSetup: GlobalNodeErrorHandlersSetupType =
     Object.assign(globalDevErrorHandlingSetup, {
         uncaughtExceptionHandlerSetup,
