@@ -16,4 +16,4 @@ prettyErrorFactory
 
     import { prettyErrorFactory } from 'errorcatcher';
 
-*   (It probably won't be required)
+*   (You probably won't need it)
