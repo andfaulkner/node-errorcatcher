@@ -1,1 +1,1 @@
-export { GlobalNodeErrorHandlersSetup, GlobalNodeErrorHandlersSetupType, prettyErrorFactory } from './src/node-error-handling';
+export { GlobalNodeErrorHandlersSetup, prettyErrorFactory } from './src/node-error-handling';
